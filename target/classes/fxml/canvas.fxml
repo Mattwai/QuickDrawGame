@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="canvasWindow" alignment="CENTER" fillWidth="false" maxHeight="546.0" maxWidth="565.0" minHeight="546.0" minWidth="565.0" prefHeight="546.0" prefWidth="565.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.CanvasController">
+  <children>
+      <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="439.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onSwitchToMenu" text="Exit">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="printResult" alignment="CENTER" prefHeight="17.0" prefWidth="168.0" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="70.0" right="30.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#onClear" text="Clear All">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="525.0">
+         <children>
+            <Button fx:id="saveImageButton" mnemonicParsing="false" onAction="#onSaveImage" text="Save Image">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+          <Label alignment="CENTER" prefHeight="27.0" prefWidth="253.0" text="Quick, Draw! SE206  Edition" textAlignment="CENTER">
+            <font>
+              <Font size="18.0" />
+            </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+          </Label>
+            <Button fx:id="playAgainButton" mnemonicParsing="false" onAction="#onPlayAgain" text="Play Again">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="wordLabel" alignment="CENTER" prefHeight="22.0" prefWidth="355.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="-15.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="timerLabel" alignment="CENTER" prefHeight="17.0" prefWidth="355.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="-15.0" />
+         </VBox.margin>
+      </Label>
+    <Canvas fx:id="canvas" height="262.0" layoutX="101.0" layoutY="65.0" width="429.0">
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+         <VBox.margin>
+            <Insets top="-15.0" />
+         </VBox.margin>
+    </Canvas>
+    <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="525.0">
+      <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#onStartDrawing" text="Start">
+               <HBox.margin>
+                  <Insets left="30.0" right="70.0" />
+               </HBox.margin>
+            </Button>
+            <Text fx:id="predictions" strokeType="OUTSIDE" strokeWidth="0.0" text="Predictions">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+        <Button fx:id="penButton" mnemonicParsing="false" onAction="#onPen" text="Pen">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="eraseButton" mnemonicParsing="false" onAction="#onErase" text="Eraser">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+      </children>
+    </HBox>
+
+  </children>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+</VBox>
